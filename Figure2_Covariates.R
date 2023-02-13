@@ -123,7 +123,8 @@ p2 = ggplot(data = covs_trans, aes(x = T, y = value, col = variable)) +
   
   guides(color = guide_legend(reverse = TRUE)) +
   scale_x_reverse(breaks = seq(0, 500, 100), expand = c(0, 40)) +
-  geom_hline(yintercept = seq(sep, 7 * sep, sep), color = "black") +
+  geom_hline(yintercept = seq(sep, 7 * sep, sep),
+             color = "black") +
   geom_line(size = 1, show.legend = FALSE) +
   
   # Draw geological periods

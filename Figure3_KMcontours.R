@@ -55,7 +55,7 @@ for (i in 1:nT) {
     subset = (FA > Tgrid[i] & LA < Tgrid[i])
   )
   surv = summary(fit, times = tgrid, extend = T)
-  zvals[i, ] = surv$surv
+  zvals[i,] = surv$surv
   mtemp = survival:::survmean(fit, rmean = 550)
   media[i] = mtemp[[1]]["*rmean"]
   CI95L[i] = media[i] - 1.96 * mtemp[[1]]["*se(rmean)"]

@@ -134,7 +134,7 @@ richness_all = function() {
     scale_color_manual(values = palette_groups) +
     guides(
       linetype = guide_legend(legendtitle),
-      size = guide_legend(legendtitle),
+      linewidth = guide_legend(legendtitle),
       color = guide_legend(legendtitle)
     ) +
     ggtitle(plot_title) +
@@ -143,22 +143,22 @@ richness_all = function() {
           panel.border = element_blank()) +
     
     # Geologic periods labels
-  
-  geom_rect(
-    data = periods,
-    mapping = aes(
-      xmin = top,
-      xmax = base,
-      ymin = -200,
-      ymax = -100
-    ),
-    fill = periods$color,
-    color = "gray",
-    alpha = 1,
-    size = .2,
-    inherit.aes = FALSE,
-    show.legend = FALSE
-  ) +
+    
+    geom_rect(
+      data = periods,
+      mapping = aes(
+        xmin = top,
+        xmax = base,
+        ymin = -200,
+        ymax = -100
+      ),
+      fill = periods$color,
+      color = "gray",
+      alpha = 1,
+      linewidth = .2,
+      inherit.aes = FALSE,
+      show.legend = FALSE
+    ) +
     geom_text(
       data = periodsaux,
       aes(x = labelpos,
@@ -170,22 +170,22 @@ richness_all = function() {
     ) +
     
     # Geologic eras labels
-  
-  geom_rect(
-    data = eras,
-    mapping = aes(
-      xmin = top,
-      xmax = base,
-      ymin = -100,
-      ymax = 0,
-    ),
-    fill = eras$color,
-    color = "gray",
-    alpha = 1,
-    size = .2,
-    inherit.aes = FALSE,
-    show.legend = FALSE
-  ) +
+    
+    geom_rect(
+      data = eras,
+      mapping = aes(
+        xmin = top,
+        xmax = base,
+        ymin = -100,
+        ymax = 0,
+      ),
+      fill = eras$color,
+      color = "gray",
+      alpha = 1,
+      linewidth = .2,
+      inherit.aes = FALSE,
+      show.legend = FALSE
+    ) +
     geom_text(
       data = eras,
       aes(
