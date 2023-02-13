@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # RStudio projects
 *.Rproj
+
+# Plots
+*.png
